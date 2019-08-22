@@ -27,3 +27,7 @@ def test_dilimiter_any_length():
 
 def test_multiple_dilimiters():
 	assert add('//[*][%]\n1*2%3') == 6
+
+def test_multiple_neg():
+    with pytest.raises(Exception):
+	    assert add('-1,-2')
