@@ -17,7 +17,7 @@ def test_different_dilimeters():
 
 def test_negative_numbers():
 	with pytest.raises(Exception):
-		assert add('1,-2,3')
+		assert add('1,-2,3') == Exception('x should not be negative. The value of x was: {}'.format(neg_nums))
 
 def test_bigger_thousand():
 	assert add('1,2,5,1001') == 8
@@ -30,4 +30,4 @@ def test_multiple_dilimiters():
 
 def test_multiple_neg():
     with pytest.raises(Exception):
-	    assert add('-1,-2')
+	    assert add('-1,-2') == Exception('x should not be negative. The value of x was: {}'.format(neg_nums))
